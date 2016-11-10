@@ -1,0 +1,30 @@
+priority -50
+
+extends c
+
+# We want to overwrite everything in parent ft.
+priority -49
+
+###########################################################################
+#                            TextMate Snippets                            #
+###########################################################################
+snippet for "for int"
+for(${1:int} ${1:name}=${2:0};${3:100}${4:<=}${1/(\w+).*/$1/};${1/(\w+).*/$1/}${5:++})
+{
+	${0:/*data*/}
+}
+endsnippet
+
+#snippet beginend "$1.begin(), $1.end() (beginend)"
+#${1:v}${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}begin(), $1${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}end()
+#endsnippet
+
+#snippet cl "class .. (class)"
+#class ${1:`!p snip.rv = snip.basename or "name"`}
+#{
+#public:
+#	${1/(\w+).*/$1/} (${2:arguments});
+#private:
+#	${0:/* data */}
+#};
+#endsnippet

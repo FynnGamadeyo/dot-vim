@@ -1,0 +1,19 @@
+priority -50
+
+extends c
+
+# We want to overwrite everything in parent ft.
+priority -49
+
+###########################################################################
+#                            TextMate Snippets                            #
+###########################################################################
+snippet cl "class .. (class)"
+class ${1:`!p snip.rv = snip.basename or "name"`}
+{
+public:
+	${1/(\w+).*/$1/} (${2:arguments});
+private:
+	${0:/* data */}
+};
+endsnippet

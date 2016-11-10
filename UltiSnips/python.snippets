@@ -1,0 +1,18 @@
+priority -50
+
+###########################################################################
+#                            TEXTMATE SNIPPETS                            #
+###########################################################################
+
+#! header
+snippet #! "Shebang header for python scripts" b
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+$0
+endsnippet
+
+snippet ifmain "ifmain" b
+if __name__ == `!p snip.rv = get_quoting_style(snip)`__main__`!p snip.rv = get_quoting_style(snip)`:
+	${1:${VISUAL:main()}}
+endsnippet
+
