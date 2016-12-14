@@ -48,7 +48,7 @@ set ignorecase
 set smartcase
 
 " Highlight search results
-set hlsearch
+" set hlsearch
 
 " Makes search act like search in modern browsers
 set incsearch 
@@ -102,9 +102,7 @@ autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
 
 let g:clang_format#command = "clang-format-3.7"
 
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-
-
+let g:ycm_global_ycm_extra_conf = '/home/aristoteles/.vim/.ycm_extra_conf.py'
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
@@ -135,6 +133,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-
 " tab
 nnoremap <C-t> :tabnew<CR>
+
