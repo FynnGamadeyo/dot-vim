@@ -102,10 +102,13 @@ autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
 
 let g:clang_format#command = "clang-format-3.7"
 
-let g:ycm_global_ycm_extra_conf = '/home/aristoteles/.vim/.ycm_extra_conf.py'
+" You Complete Me module 
+let g:ycm_global_ycm_extra_conf = '/home/marcel/.vim/.ycm_extra_conf.py'
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+nnoremap <leader>jd :YcmCompleter GoTo<CR> 
+
 set conceallevel=2
 set concealcursor=vin
 let g:clang_snippets=1
@@ -136,3 +139,7 @@ set expandtab
 " tab
 nnoremap <C-t> :tabnew<CR>
 
+" using clipboard as default
+set clipboard=unnamedplus
+
+:set mouse=a
